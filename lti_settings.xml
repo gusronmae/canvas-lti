@@ -8,26 +8,24 @@
     http://www.imsglobal.org/xsd/imsbasiclti_v1p0 http://www.imsglobal.org/xsd/lti/ltiv1p0/imsbasiclti_v1p0.xsd
     http://www.imsglobal.org/xsd/imslticm_v1p0 http://www.imsglobal.org/xsd/lti/ltiv1p0/imslticm_v1p0.xsd
     http://www.imsglobal.org/xsd/imslticp_v1p0 http://www.imsglobal.org/xsd/lti/ltiv1p0/imslticp_v1p0.xsd">
-    <blti:title>fireReplacement</blti:title>
-    <blti:description>This is a work in progress, for testing purposes</blti:description>
+    <blti:title>myFire</blti:title>
+    <blti:description>fsfsfs</blti:description>
     <blti:icon></blti:icon>
-    <blti:launch_url>http://localhost:4567</blti:launch_url>
+    <blti:launch_url>https://lti-app.herokuapp.com/</blti:launch_url>
     <blti:extensions platform="canvas.instructure.com">
-      <lticm:property name="tool_id">dd5b310b-2655-4037-8f16-847f16a585eb</lticm:property>
-      <lticm:property name="privacy_level">public</lticm:property>
-      <lticm:property name="domain">localhost</lticm:property>
-      <!-- Länken som ska följas vid klick på vänstermenyn -->
+      <lticm:property name="tool_id">f29acacc-419e-44b9-a604-e0a4e2d8e791</lticm:property>
+      <lticm:property name="privacy_level">anonymous</lticm:property>
+      <lticm:property name="domain">lti-app.herokuapp.com</lticm:property>
       <lticm:options name="course_navigation">
-        <lticm:property name="url">http://localhost:4567/helloworld</lticm:property>
-        <lticm:property name="text">fireReplacement</lticm:property>
+        <lticm:property name="url">https://lti-app.herokuapp.com/launch</lticm:property>
+        <lticm:property name="text">Fire</lticm:property>
         <lticm:property name="visibility">public</lticm:property>
         <lticm:property name="default">enabled</lticm:property>
         <lticm:property name="enabled">true</lticm:property>
       </lticm:options>
-      <!--  -->
       <lticm:options name="account_navigation">
-        <lticm:property name="url">http://localhost:4567/launch</lticm:property>
-        <lticm:property name="text">fireReplacement</lticm:property>
+        <lticm:property name="url">https://lti-app.herokuapp.com/</lticm:property>
+        <lticm:property name="text">myFire</lticm:property>
         <lticm:property name="enabled">true</lticm:property>
       </lticm:options>
     </blti:extensions>
