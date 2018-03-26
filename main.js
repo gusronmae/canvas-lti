@@ -6,12 +6,11 @@ const LISTEN_PORT = process.env.HOST || 4567;
 
 app.use(express.static(__dirname + '/public'));
 
-app.get('/', (req, res) => res.sendFile('index.html'));
+app.get('/', (req, res) => res.send('Magnus är så go och gla, när han äter chokela'));
 app.post('/helloworld', (req, res) => {
 
     res.send('Testing, Testing');
 });
 app.post('/launch', (req, res) => res.send('Testing again'));
-
 
 app.listen(LISTEN_PORT, () => console.log('Listening on port ' + LISTEN_PORT));
