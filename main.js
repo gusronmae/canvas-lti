@@ -25,13 +25,14 @@ app.post('/launch', (req, res) => {
         oauth_timestamp,
         oauth_callback,
      } = req.body;
- 
-    console.log(oauth_nonce);
-    console.log(oauth_consumer_key);
-    console.log(oauth_signature);
-    console.log(oauth_signature_method);
-    console.log(oauth_timestamp);
-    console.log(oauth_callback);
+
+     console.log(req.body);
+    // console.log(oauth_nonce);
+    // console.log(oauth_consumer_key);
+    // console.log(oauth_signature);
+    // console.log(oauth_signature_method);
+    // console.log(oauth_timestamp);
+    // console.log(oauth_callback);
 
     const provider = new lti.Provider(oauth_consumer_key, 2);
     
