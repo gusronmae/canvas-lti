@@ -26,10 +26,18 @@ app.post('/launch', (req, res) => {
         oauth_callback,
      } = req.body;
  
+    console.log(oauth_nonce);
+    console.log(oauth_consumer_key);
+    console.log(oauth_signature);
+    console.log(oauth_signature_method);
+    console.log(oauth_timestamp);
+    console.log(oauth_callback);
+
     const provider = new lti.Provider(oauth_consumer_key, 2);
     
     provider.valid_request(req, (err, isValid) => {
         if(!isValid) {
+            console.log(JSON.stringify(err));
             console.log('Error in validating request');
             res.send(err.message);
         } else {
