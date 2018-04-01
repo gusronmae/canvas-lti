@@ -3,10 +3,17 @@ const bodyParser = require('body-parser');
 const lti = require('ims-lti');
 const app = express();
 const cors = require('cors');
+const session = require('express-session');
 
 const LISTEN_PORT = process.env.PORT || 8080;
 
-app.use(bodyParser.urlencoded({extended: false}));
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({extended: true}));
+app.use(session({
+    secret: '123',
+    resave: true,
+    saveUninitialized: true,
+}));
 app.use(cors());
 
 // The path for account menu item (the one furthest to the left) (account navigation)
