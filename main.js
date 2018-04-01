@@ -34,7 +34,7 @@ app.post('/launch', (req, res) => {
     // console.log(oauth_timestamp);
     // console.log(oauth_callback);
 
-    const provider = new lti.Provider(oauth_consumer_key, 2);
+    const provider = new lti.Provider(oauth_consumer_key, 123);
     
     provider.valid_request(req, (err, isValid) => {
         if(!isValid) {
