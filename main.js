@@ -36,18 +36,13 @@ app.post('/launch', (req, res) => {
      } = req.body;
 
      console.log(req.body);
-    // console.log(oauth_nonce);
-    // console.log(oauth_consumer_key);
-    // console.log(oauth_signature);
-    // console.log(oauth_signature_method);
-    // console.log(oauth_timestamp);
-    // console.log(oauth_callback);
+
     console.log('oauth_consumer_key: ' + oauth_consumer_key);
     console.log('oauth_signature: ' + oauth_signature);
 
-    const provider = new lti.Provider(oauth_consumer_key, '123');
+    const provider = new lti.Provider(oauth_consumer_key, '123', null, null);
     
-    provider.valid_request(req, (err, isValid) => {
+    provider.valid_request(req, req.body, (err, isValid) => {
         if(!isValid) {
             console.log(JSON.stringify(err));
             console.log('Error in validating request');

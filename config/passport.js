@@ -1,1 +1,0 @@
-const LTIStrategy = require('passport-lti');
