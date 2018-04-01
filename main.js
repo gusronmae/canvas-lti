@@ -2,10 +2,12 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const lti = require('ims-lti');
 const app = express();
+const cors = require('cors');
 
 const LISTEN_PORT = process.env.PORT || 8080;
 
 app.use(bodyParser.urlencoded({extended: false}));
+app.use(cors());
 
 // The path for account menu item (the one furthest to the left) (account navigation)
 // Only visible by administrators
