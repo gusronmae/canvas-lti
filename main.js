@@ -35,8 +35,10 @@ app.post('/launch', (req, res) => {
     // console.log(oauth_signature_method);
     // console.log(oauth_timestamp);
     // console.log(oauth_callback);
+    console.log('oauth_consumer_key: ' + oauth_consumer_key);
+    console.log('oauth_signature: ' + oauth_signature);
 
-    const provider = new lti.Provider(oauth_consumer_key, 123);
+    const provider = new lti.Provider(oauth_consumer_key, '123');
     
     provider.valid_request(req, (err, isValid) => {
         if(!isValid) {
